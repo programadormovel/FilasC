@@ -65,6 +65,12 @@ int sai(Fila* f){
 	return num;
 }
 
+void imprime(Fila* f){
+	No* x;
+	for(x = f->ini; x != NULL; x = x->proximo)
+		printf("Informação : %d \n", x->info);
+}
+
 
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -77,7 +83,11 @@ int main(int argc, char *argv[]) {
 	entra(f, 2);
 	entra(f, 3);
 	entra(f, 4);
+	imprime(f);
 	printf("Primeiro elemento: %d\n", sai(f));
+	imprime(f);
+	printf("Primeiro elemento: %d\n", sai(f));
+	imprime(f);
 	
 	return 0;
 }
